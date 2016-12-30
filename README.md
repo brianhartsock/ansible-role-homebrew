@@ -1,6 +1,8 @@
 Ansible Role Homebrew
 =========
 
+[![Build Status](https://travis-ci.org/brianhartsock/ansible-role-homebrew.svg?branch=master)](https://travis-ci.org/brianhartsock/ansible-role-homebrew)
+
 Simple role to install [homebrew](http://brew.sh), homebrew packages, and [homebrew cask](https://caskroom.github.io) packages. It will also update homebrew and upgrade packages.
 
 Requirements
