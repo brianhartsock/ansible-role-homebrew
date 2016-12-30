@@ -1,0 +1,33 @@
+---
+homebrew_update: true
+
+homebrew_packages:
+  - ansible
+  - awscli
+  - bash-completion
+  - coreutils
+  - findutils
+  - git
+  - go
+  - gpg
+  - hugo
+  - jq
+  - openssl
+  - python
+  - the_silver_searcher
+  - vim
+  - watch
+  - wget
+
+homebrew_cask_packages:
+  - 1password
+  - atom
+  - crashplan
+  - docker
+  - dropbox
+  - firefox
+  - google-chrome
+  - java
+  - steam
+  - virtualbox
+

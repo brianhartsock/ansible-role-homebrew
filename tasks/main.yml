@@ -1,0 +1,21 @@
+---
+- name: Check if Homebrew is installed
+  shell: which brew
+  register: homebrew_installed
+  changed_when: false
+- name: Install Homebrew
+  shell: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  when: homebrew_installed.rc != 0
+- name: Update and Upgrade Homebrew
+  homebrew:
+    update_homebrew: yes
+    upgrade_all: yes
+  when: homebrew_update
+- name: "Install homebrew packages"
+  homebrew:
+    name: "{{ item }}"
+  with_items: "{{ homebrew_packages }}"
+- name: "Install homebrew cask packages"
+  homebrew_cask:
+    name: "{{ item }}"
+  with_items: "{{ homebrew_cask_packages }}"

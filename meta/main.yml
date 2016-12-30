@@ -1,0 +1,22 @@
+galaxy_info:
+  author: Brian Hartsock
+  description: Simple role to install homebrew, homebrew packages, and homebrew cask packages.
+  license: MIT
+
+  min_ansible_version: 1.2
+
+  platforms:
+    - name: MacOSX
+      versions:
+      - all
+
+  galaxy_tags:
+    - homebrew
+    - brew
+    - cask
+    - osx
+    - mac
+    - development
+    - packaging
+
+dependencies: []
