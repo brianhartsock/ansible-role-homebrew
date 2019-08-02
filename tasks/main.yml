@@ -3,6 +3,7 @@
   shell: which brew
   register: homebrew_installed
   changed_when: false
+  check_mode: no
 - name: Install Homebrew
   shell: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   when: homebrew_installed.rc != 0
