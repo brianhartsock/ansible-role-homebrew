@@ -14,8 +14,7 @@
   when: homebrew_update
 - name: "Install homebrew packages"
   homebrew:
-    name: "{{ item }}"
-  with_items: "{{ homebrew_packages }}"
+    name: "{{ homebrew_packages }}"
 - name: "Install homebrew cask packages"
   homebrew_cask:
     name: "{{ item }}"
