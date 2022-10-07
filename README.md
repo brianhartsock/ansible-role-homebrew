@@ -21,6 +21,7 @@ Customize the defaults to fit your own needs. These are very specific to my pers
 |homebrew_update|Wheether or note to update homebrew and upgrade all packages each run|true|
 |homebrew_packages|List of homebrew packages to install.|See [defaults](defaults/main.yml)|
 |homebrew_cask_packages|List of homebrew cask packages to install.|See [defaults](defaults/main.yml)|
+|homebrew_taps|List of 3rd party repositories to support.| []|
 
 Dependencies
 ------------

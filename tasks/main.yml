@@ -12,6 +12,10 @@
     update_homebrew: yes
     upgrade_all: yes
   when: homebrew_update
+- name: "Configure Taps"
+  homebrew_tap:
+    name: "{{ item }}"
+  with_items: "{{ homebrew_taps }}"
 - name: "Install homebrew packages"
   homebrew:
     name: "{{ homebrew_packages }}"
