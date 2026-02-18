@@ -1,14 +1,17 @@
+---
 galaxy_info:
+  role_name: homebrew
+  namespace: brianhartsock
   author: Brian Hartsock
   description: Simple role to install homebrew, homebrew packages, and homebrew cask packages.
   license: MIT
 
-  min_ansible_version: 1.2
+  min_ansible_version: "2.4"
 
   platforms:
     - name: MacOSX
       versions:
-      - all
+        - all
 
   galaxy_tags:
     - homebrew
