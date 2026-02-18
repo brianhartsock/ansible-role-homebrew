@@ -1,16 +1,18 @@
 ---
 - name: Check if Homebrew is installed
-  shell: which brew
+  ansible.builtin.command: which brew
   register: homebrew_installed
   changed_when: false
-  check_mode: no
+  check_mode: false
 - name: Install Homebrew
-  shell: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  ansible.builtin.shell:
+    cmd: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  changed_when: true
   when: homebrew_installed.rc != 0
 - name: Update and Upgrade Homebrew
   homebrew:
-    update_homebrew: yes
-    upgrade_all: yes
+    update_homebrew: true
+    upgrade_all: true
   when: homebrew_update
 - name: "Configure Taps"
   homebrew_tap:
