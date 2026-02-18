@@ -1,2 +1,10 @@
+#Ansible
 .ansible/
+*.retry
+
+# Python
 .venv/
+
+# Claude
+.claude/settings.local.json
+

@@ -5,9 +5,12 @@ requires-python = ">=3.14"
 
 [dependency-groups]
 dev = [
+  "ansible",
   "ansible-lint",
   "flake8",
   "molecule",
+  "molecule-plugins[docker]",
   "pre-commit",
+  "pytest-testinfra",
   "yamllint",
 ]
